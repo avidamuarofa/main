@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff5f8;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    nav {
+      background-color: #dff0ff;
+      padding: 15px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #0044cc;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    h1 {
+      margin-top: 20px;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: left;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 15px;
+      background-color: #ff5c8d;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #e94e7a;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+
+  <h1>📞 Kontak 📞</h1>
+  <p>Email: <a href="mailto:avidamu02@gmail.com">avidamu02@gmail.com</a></p>
+    <p>Telepon: +62 83873157247</p>
+
+
+  <!-- Form kirim ke WhatsApp -->
+  <form onsubmit="sendWA(event)">
+    <label for="nama">Nama:</label>
+    <input type="text" id="nama" name="nama" required>
+
+    <label for="pesan">Pesan Ucapan:</label>
+    <textarea id="pesan" name="pesan" rows="4" required></textarea>
+
+    <button type="submit">Kirim 🎁</button>
+  </form>
+
+  <script>
+    function sendWA(event) {
+      event.preventDefault();
+      let nama = document.getElementById("nama").value;
+      let pesan = document.getElementById("pesan").value;
+      let nomor = "083873157246"; // 🔹 Ganti dengan nomor WA kamu
+      let url = `https://wa.me/${nomor}?text=Halo, saya ${nama}.%0A${pesan}`;
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
+
+

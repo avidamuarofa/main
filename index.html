@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ucapan Ulang Tahun</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background: url('image2.jpg') no-repeat center center fixed; /* ganti dengan foto kamu */
+      background-size: cover;
+      animation: gradientBG 8s ease infinite;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Navigasi */
+    nav {
+      background-color: #e0f0ff;
+      padding: 12px;
+      border-radius: 0 0 10px 10px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(232, 101, 101, 0.1);
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #0056b3;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 15px;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      color: #ff4081;
+    }
+
+    /* Konten */
+    .content {
+      margin-top: 100px;
+      color: #7cf171;
+    }
+
+    .kejutan {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #ff4081;
+      text-decoration: none;
+      background: #ffe0ec;
+      padding: 12px 25px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .kejutan:hover {
+      background: #ff80ab;
+      color: white;
+    }
+
+    /* Confetti */
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background-color: red;
+      top: -10px;
+      animation: fall linear forwards;
+      z-index: 2000;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigasi -->
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+
+  <!-- Konten -->
+  <div class="content">
+    <h1>🎂 Selamat Ulang Tahun, Rizky! 🎂</h1>
+    <h2>Hari spesial untukmu 🎁</h2>
+    <p>Semoga panjang umur, sehat selalu, dan semua impianmu tercapai! 💖</p>
+
+    <!-- Tombol kejutan -->
+    <a href="#" class="kejutan" onclick="showSurprise()">Klik untuk Kejutan 🎉</a>
+  </div>
+
+  <script>
+    function showSurprise() {
+      alert('🎉 Selamat Ulang Tahun Rizky 🎂✨ Semoga harimu penuh kebahagiaan!');
+
+      // Buat confetti
+      for (let i = 0; i < 50; i++) {
+        let confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+
+        // posisi acak
+        confetti.style.left = Math.random() * window.innerWidth + 'px';
+        // warna acak
+        confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        // durasi acak
+        confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+
+        document.body.appendChild(confetti);
+
+        // hapus confetti setelah animasi selesai
+        setTimeout(() => {
+          confetti.remove();
+        }, 5000);
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+

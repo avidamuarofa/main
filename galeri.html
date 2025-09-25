@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri Ulang Tahun</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff0f5;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: #dbeeff;
+      padding: 15px 0;
+    }
+
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #0044cc;
+    }
+
+    h1 {
+      margin: 20px 0;
+      color: #333;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 350px; /* lebih tinggi */
+      object-fit: cover; /* ubah ke contain jika mau utuh */
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="galeri.html">Galeri</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+  </header>
+
+  <h1>📸 Galeri Kenangan 📸</h1>
+
+  <div class="gallery">
+    <img src="berdua1.jpg" alt="Foto 1">
+    <img src="berdua2.jpg" alt="Foto 2">
+    <img src="berdua3.jpg" alt="Foto 3">
+    <img src="berdua4.jpg" alt="Foto 4">
+    <img src="berdua7.jpg" alt="Foto 5">
+    <img src="berdua8.jpg" alt="Foto 6">
+  </div>
+
+</body>
+</html>
+
+
+
+
+
